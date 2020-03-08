@@ -6,6 +6,8 @@ Parse fping output and store results in timescaledb.
 
 ## Install
 
+[Grafana dashboard](https://grafana.com/grafana/dashboards/11867)
+
 ### TSDB
 
 ```sql
