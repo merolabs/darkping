@@ -128,6 +128,8 @@ func writePoints(row data) {
 			log.Fatal(err)
 		}
 
+		defer stmt.Close()
+
 		if _, err := stmt.Exec(row.target, row.sent, row.recv, row.loss, min, max, avg); err != nil {
 			log.Fatal(err)
 		}
@@ -136,6 +138,8 @@ func writePoints(row data) {
 		if err != nil {
 			log.Fatal(err)
 		}
+
+		defer stmt.Close()
 
 		if _, err := stmt.Exec(row.target, row.sent, row.recv, row.loss); err != nil {
 			log.Fatal(err)
